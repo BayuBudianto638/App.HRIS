@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App.HRIS.Views.Attendances.SubmitTimePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="SubmitTimePage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Image
+                x:Name="picImage"
+                Aspect="AspectFit"
+                HeightRequest="185"
+                Source="dotnet_bot.png" />
+
+            <toolkit:CameraView x:Name="picCamera" MediaCaptured="picCamera_MediaCaptured" />
+            <Button
+                x:Name="cameraButton"
+                Clicked="cameraButton_Clicked"
+                Text="Capture" />
+            <Button Clicked="timeInButton_Clicked" Text="Time In" />
+            <Button Clicked="timeOutButton_Clicked" Text="Time Out" />
+            <Button
+                x:Name="gpsButton"
+                Clicked="gpsButton_Clicked"
+                IsVisible="false"
+                Text="Get Location" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

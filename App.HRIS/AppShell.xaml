@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="App.HRIS.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App.HRIS"
+    xmlns:views="clr-namespace:App.HRIS.Views"
+    xmlns:viewsAtt="clr-namespace:App.HRIS.Views.Attendances"
+    Title="App.HRIS"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:LoadingPage}"
+        Route="loading" />
+
+    <!--  Login Page  -->
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="login" />
+    <!--  Main Page  -->
+    <TabBar>
+        <Tab Title="Home" Icon="house_door_fill.svg">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate views:HomePage}"
+                Icon="house_door_fill.svg"
+                Route="home" />
+        </Tab>
+        <Tab Title="Submit Time" Icon="gear_fill.svg">
+            <ShellContent
+                Title="Submit Time"
+                ContentTemplate="{DataTemplate viewsAtt:SubmitTimePage}"
+                Icon="house_door_fill.svg"
+                Route="submittime" />
+        </Tab>
+        <Tab Title="Settings" Icon="gear_fill.svg">
+            <ShellContent
+                Title="Settings"
+                ContentTemplate="{DataTemplate views:SettingPage}"
+                Icon="house_door_fill.svg"
+                Route="settings" />
+        </Tab>
+    </TabBar>
+
+
+</Shell>
