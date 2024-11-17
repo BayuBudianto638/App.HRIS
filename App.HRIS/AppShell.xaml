@@ -21,25 +21,25 @@
         Route="login" />
     <!--  Main Page  -->
     <TabBar>
-        <Tab Title="Home" Icon="house_door_fill.svg">
+        <Tab Title="Home" Icon="house_fill.svg">
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate views:HomePage}"
-                Icon="house_door_fill.svg"
+                Icon="house_fill.svg"
                 Route="home" />
         </Tab>
-        <Tab Title="Submit Time" Icon="gear_fill.svg">
+        <Tab Title="Submit Time" Icon="calendar3.svg">
             <ShellContent
                 Title="Submit Time"
                 ContentTemplate="{DataTemplate viewsAtt:SubmitTimePage}"
-                Icon="house_door_fill.svg"
+                Icon="calendar3.svg"
                 Route="submittime" />
         </Tab>
-        <Tab Title="Settings" Icon="gear_fill.svg">
+        <Tab Title="Settings" Icon="tools.svg">
             <ShellContent
                 Title="Settings"
                 ContentTemplate="{DataTemplate views:SettingPage}"
-                Icon="house_door_fill.svg"
+                Icon="tools.svg"
                 Route="settings" />
         </Tab>
     </TabBar>
